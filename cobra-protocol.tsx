@@ -7,7 +7,7 @@ import { TerminalText } from "./components/terminal-text"
 import { GlitchLogo } from "./components/glitch-logo"
 import { TerminalSection } from "./components/terminal-section"
 import { MissionLog } from "./components/mission-log"
-import { ExternalLink, Shield, Zap, Brain, Target, DollarSign, Bot } from "lucide-react"
+import { ExternalLink, Shield, Zap, Brain, Target, DollarSign, Bot, Copy } from "lucide-react"
 import { TerminalInterface } from "./components/terminal-interface"
 import { AIChat } from "./components/ai-chat"
 
@@ -18,6 +18,8 @@ export default function CobraProtocol() {
   const [showTerminal, setShowTerminal] = useState(false)
   const [showAIChat, setShowAIChat] = useState(false)
 
+  const contractAddress = "0x39773d162c33c9a58e14eb48d5e8cea30b1a053a"
+
   const bootSequence = [
     "> INITIATING COBRA PROTOCOL...",
     "> CONNECTING TO BASE...",
@@ -25,6 +27,11 @@ export default function CobraProtocol() {
     "> AI ENGAGED",
     "> x100 STRIKE READY",
   ]
+
+  const copyToClipboard = (text: string) => {
+    navigator.clipboard.writeText(text)
+    // You could add a toast notification here
+  }
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -122,6 +129,29 @@ export default function CobraProtocol() {
 
       {bootComplete && (
         <>
+          {/* Contract Address Display */}
+          <section className="py-6 px-4 max-w-7xl mx-auto">
+            <div className="border border-terminal-blue/30 bg-terminal-blue/5 p-4 rounded">
+              <div className="text-center space-y-2">
+                <div className="text-terminal-blue font-mono text-sm">CONTRACT ADDRESS (BASE NETWORK)</div>
+                <div className="flex items-center justify-center gap-2 flex-wrap">
+                  <code className="text-terminal-blue bg-black px-3 py-1 rounded text-xs sm:text-sm break-all">
+                    {contractAddress}
+                  </code>
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    className="border-terminal-blue/30 text-terminal-blue hover:bg-terminal-blue/10 bg-transparent"
+                    onClick={() => copyToClipboard(contractAddress)}
+                  >
+                    <Copy className="h-3 w-3" />
+                  </Button>
+                </div>
+                <div className="text-xs text-terminal-blue/70">Always verify contract address before transactions</div>
+              </div>
+            </div>
+          </section>
+
           {/* AI Engine Overview */}
           <section className="py-10 sm:py-20 px-4 max-w-7xl mx-auto">
             <TerminalSection title="COBRA INTEL MODULE v1.0" className="mb-8">
@@ -235,7 +265,7 @@ export default function CobraProtocol() {
                           </div>
                           <div className="flex justify-between">
                             <span>Security Level:</span>
-                            <span className="text-yellow-400">CLASSIFIED</span>
+                            <span className="text-yellow-400">VERIFIED</span>
                           </div>
                         </div>
                       </div>
@@ -347,13 +377,25 @@ export default function CobraProtocol() {
                             <span>Total Supply:</span>
                             <span className="text-terminal-blue">1,000,000,000 $COBRA</span>
                           </div>
-                          <div className="flex justify-between">
+                          <div className="flex flex-col gap-1">
                             <span>Contract Address:</span>
-                            <span className="text-terminal-blue text-xs">0x...CLASSIFIED</span>
+                            <div className="flex items-center gap-2">
+                              <code className="text-terminal-blue text-xs bg-black px-2 py-1 rounded break-all">
+                                {contractAddress}
+                              </code>
+                              <Button
+                                size="sm"
+                                variant="ghost"
+                                className="h-6 w-6 p-0 text-terminal-blue hover:bg-terminal-blue/10"
+                                onClick={() => copyToClipboard(contractAddress)}
+                              >
+                                <Copy className="h-3 w-3" />
+                              </Button>
+                            </div>
                           </div>
                           <div className="flex justify-between">
                             <span>Launch Date:</span>
-                            <span className="text-terminal-blue">2024 Q4</span>
+                            <span className="text-terminal-blue">2025 Q1</span>
                           </div>
                           <div className="flex justify-between">
                             <span>Security Audit:</span>
@@ -594,7 +636,7 @@ _______________
                 </div>
 
                 <div className="text-xs text-terminal-blue/40 px-4">
-                  COBRA PROTOCOL © 2024 | DEPLOYED ON BASE VIA APE STORE
+                  COBRA PROTOCOL © 2025 | DEPLOYED ON BASE VIA APE STORE
                 </div>
               </div>
             </div>

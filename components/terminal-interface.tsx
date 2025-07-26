@@ -22,6 +22,8 @@ export function TerminalInterface({ isOpen, onClose }: TerminalInterfaceProps) {
   const inputRef = useRef<HTMLInputElement>(null)
   const terminalRef = useRef<HTMLDivElement>(null)
 
+  const contractAddress = "0x39773d162c33c9a58e14eb48d5e8cea30b1a053a"
+
   const commands = {
     help: () => [
       "Available commands:",
@@ -31,6 +33,7 @@ export function TerminalInterface({ isOpen, onClose }: TerminalInterfaceProps) {
       "  apestore  - APE STORE integration info",
       "  social    - Community links",
       "  ai        - COBRA AI assistant info",
+      "  contract  - Show contract address",
       "  strike    - Execute strike simulation",
       "  clear     - Clear terminal",
       "  exit      - Close terminal",
@@ -72,6 +75,14 @@ export function TerminalInterface({ isOpen, onClose }: TerminalInterfaceProps) {
       "📱 Telegram: https://t.me/cobraprotocolportal",
       "🌐 Website: https://cobraprotocol.xyz",
       "📊 Chart: https://dexscreener.com/base/cobra",
+    ],
+    contract: () => [
+      "COBRA PROTOCOL CONTRACT:",
+      "Network: BASE",
+      `Address: ${contractAddress}`,
+      "Type: ERC-20 + AI Layer",
+      "Status: VERIFIED ✓",
+      "Security: AUDITED",
     ],
     ai: () => [
       "COBRA AI ASSISTANT:",
