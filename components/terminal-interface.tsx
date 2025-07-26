@@ -145,7 +145,7 @@ export function TerminalInterface({ isOpen, onClose }: TerminalInterfaceProps) {
 
   return (
     <div className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-      <div className="bg-black border-2 border-terminal-blue w-full max-w-4xl h-[80vh] flex flex-col">
+      <div className="bg-black border-2 border-terminal-blue w-full max-w-4xl h-[80vh] sm:h-[80vh] flex flex-col mx-4 sm:mx-0">
         {/* Terminal Header */}
         <div className="flex items-center justify-between bg-terminal-blue/10 border-b border-terminal-blue/30 px-4 py-2">
           <div className="flex items-center gap-2">
@@ -160,7 +160,10 @@ export function TerminalInterface({ isOpen, onClose }: TerminalInterfaceProps) {
         </div>
 
         {/* Terminal Content */}
-        <div ref={terminalRef} className="flex-1 p-4 overflow-y-auto font-mono text-sm text-terminal-blue">
+        <div
+          ref={terminalRef}
+          className="flex-1 p-2 sm:p-4 overflow-y-auto font-mono text-xs sm:text-sm text-terminal-blue"
+        >
           {history.map((line, index) => (
             <div key={index} className="whitespace-pre-wrap">
               {line}
@@ -168,15 +171,15 @@ export function TerminalInterface({ isOpen, onClose }: TerminalInterfaceProps) {
           ))}
 
           {/* Input Line */}
-          <div className="flex items-center">
-            <span className="text-terminal-blue mr-2">{currentPath}</span>
+          <div className="flex items-center text-xs sm:text-sm">
+            <span className="text-terminal-blue mr-1 sm:mr-2 flex-shrink-0">{currentPath}</span>
             <input
               ref={inputRef}
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyPress={handleKeyPress}
-              className="bg-transparent border-none outline-none text-terminal-blue flex-1 font-mono"
+              className="bg-transparent border-none outline-none text-terminal-blue flex-1 font-mono min-w-0"
               autoComplete="off"
             />
             <span className="animate-pulse">_</span>

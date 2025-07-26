@@ -208,7 +208,7 @@ When discussing COBRA Protocol specifically, use the live COBRA data provided in
 
   return (
     <div className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-      <div className="bg-black border-2 border-terminal-blue w-full max-w-4xl h-[80vh] flex flex-col">
+      <div className="bg-black border-2 border-terminal-blue w-full max-w-4xl h-[80vh] flex flex-col mx-4 sm:mx-0">
         {/* Header */}
         <div className="flex items-center justify-between bg-terminal-blue/10 border-b border-terminal-blue/30 px-4 py-3">
           <div className="flex items-center gap-3">
@@ -225,28 +225,35 @@ When discussing COBRA Protocol specifically, use the live COBRA data provided in
         </div>
 
         {/* Messages */}
-        <div className="flex-1 overflow-y-auto p-4 space-y-4">
+        <div className="flex-1 overflow-y-auto p-2 sm:p-4 space-y-3 sm:space-y-4">
           {messages.map((message) => (
-            <div key={message.id} className={`flex gap-3 ${message.role === "user" ? "justify-end" : "justify-start"}`}>
-              <div className={`flex gap-3 max-w-[80%] ${message.role === "user" ? "flex-row-reverse" : "flex-row"}`}>
-                <div
-                  className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
-                    message.role === "user"
-                      ? "bg-terminal-blue/20 text-terminal-blue"
-                      : "bg-terminal-blue/10 text-terminal-blue"
-                  }`}
-                >
-                  {message.role === "user" ? <User className="h-4 w-4" /> : <Bot className="h-4 w-4" />}
-                </div>
-                <div
-                  className={`rounded-lg p-3 font-mono text-sm ${
-                    message.role === "user"
-                      ? "bg-terminal-blue/20 text-terminal-blue"
-                      : "bg-terminal-blue/5 text-terminal-blue border border-terminal-blue/20"
-                  }`}
-                >
-                  <div className="whitespace-pre-wrap">{message.content}</div>
-                  <div className="text-xs text-terminal-blue/50 mt-2">{message.timestamp.toLocaleTimeString()}</div>
+            <div
+              key={message.id}
+              className={`flex gap-2 sm:gap-3 max-w-[90%] sm:max-w-[80%] ${message.role === "user" ? "flex-row-reverse" : "flex-row"}`}
+            >
+              <div
+                className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
+                  message.role === "user"
+                    ? "bg-terminal-blue/20 text-terminal-blue"
+                    : "bg-terminal-blue/10 text-terminal-blue"
+                }`}
+              >
+                {message.role === "user" ? (
+                  <User className="h-3 w-3 sm:h-4 sm:w-4" />
+                ) : (
+                  <Bot className="h-3 w-3 sm:h-4 sm:w-4" />
+                )}
+              </div>
+              <div
+                className={`rounded-lg p-2 sm:p-3 font-mono text-xs sm:text-sm ${
+                  message.role === "user"
+                    ? "bg-terminal-blue/20 text-terminal-blue"
+                    : "bg-terminal-blue/5 text-terminal-blue border border-terminal-blue/20"
+                }`}
+              >
+                <div className="whitespace-pre-wrap break-words">{message.content}</div>
+                <div className="text-xs text-terminal-blue/50 mt-1 sm:mt-2">
+                  {message.timestamp.toLocaleTimeString()}
                 </div>
               </div>
             </div>
@@ -278,7 +285,7 @@ When discussing COBRA Protocol specifically, use the live COBRA data provided in
         </div>
 
         {/* Input */}
-        <div className="border-t border-terminal-blue/30 p-4">
+        <div className="border-t border-terminal-blue/30 p-2 sm:p-4">
           <div className="flex gap-2">
             <input
               ref={inputRef}
@@ -286,20 +293,20 @@ When discussing COBRA Protocol specifically, use the live COBRA data provided in
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyPress={handleKeyPress}
-              placeholder="Ask COBRA AI anything..."
-              className="flex-1 bg-terminal-blue/5 border border-terminal-blue/30 rounded-lg px-4 py-2 text-terminal-blue placeholder-terminal-blue/50 font-mono text-sm focus:outline-none focus:border-terminal-blue/50"
+              placeholder="Ask COBRA AI..."
+              className="flex-1 bg-terminal-blue/5 border border-terminal-blue/30 rounded-lg px-3 sm:px-4 py-2 text-terminal-blue placeholder-terminal-blue/50 font-mono text-xs sm:text-sm focus:outline-none focus:border-terminal-blue/50"
               disabled={isLoading}
             />
             <Button
               onClick={sendMessage}
               disabled={!input.trim() || isLoading}
-              className="bg-terminal-blue text-black hover:bg-terminal-blue/80 font-mono px-4"
+              className="bg-terminal-blue text-black hover:bg-terminal-blue/80 font-mono px-3 sm:px-4"
             >
-              <Send className="h-4 w-4" />
+              <Send className="h-3 w-3 sm:h-4 sm:w-4" />
             </Button>
           </div>
           <div className="text-xs text-terminal-blue/50 mt-2 font-mono">
-            Press Enter to send • Powered by COBRA AI Intelligence
+            <span className="hidden sm:inline">Press Enter to send • </span>Powered by COBRA AI
           </div>
         </div>
       </div>

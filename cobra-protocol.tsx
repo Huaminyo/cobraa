@@ -55,12 +55,12 @@ export default function CobraProtocol() {
       </div>
 
       {/* Hero Section - Terminal Boot */}
-      <section className="min-h-screen flex items-center justify-center relative">
-        <div className="text-center space-y-8 z-10">
+      <section className="min-h-screen flex items-center justify-center relative px-4">
+        <div className="text-center space-y-4 sm:space-y-8 z-10 w-full max-w-4xl">
           {!bootComplete ? (
-            <div className="space-y-4">
+            <div className="space-y-2 sm:space-y-4">
               {bootSequence.slice(0, currentBootStep + 1).map((step, index) => (
-                <div key={index} className="text-terminal-blue text-xl">
+                <div key={index} className="text-terminal-blue text-sm sm:text-xl">
                   {index === currentBootStep ? (
                     <TerminalText text={step} speed={100} onComplete={handleBootStepComplete} />
                   ) : (
@@ -70,42 +70,44 @@ export default function CobraProtocol() {
               ))}
             </div>
           ) : (
-            <div className="space-y-8 animate-fade-in">
+            <div className="space-y-4 sm:space-y-8 animate-fade-in">
               <GlitchLogo />
 
-              <div className="text-2xl text-terminal-blue/80">
+              <div className="text-lg sm:text-2xl text-terminal-blue/80 px-4">
                 <TerminalText text="Deployed on APE STORE. Trained to Strike on BASE." speed={80} />
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-terminal-blue text-black hover:bg-terminal-blue/80 font-mono" size="lg">
-                  <ExternalLink className="mr-2 h-4 w-4" />
-                  LAUNCH IN APE STORE
-                </Button>
-                <Button
-                  variant="outline"
-                  className="border-terminal-blue text-terminal-blue hover:bg-terminal-blue/10 font-mono bg-transparent"
-                  size="lg"
-                >
-                  READ DOSSIER
-                </Button>
-                <Button
-                  variant="outline"
-                  className="border-terminal-blue text-terminal-blue hover:bg-terminal-blue/10 font-mono bg-transparent"
-                  size="lg"
-                  onClick={() => setShowTerminal(true)}
-                >
-                  ENTER TERMINAL
-                </Button>
-                <Button
-                  variant="outline"
-                  className="border-terminal-blue text-terminal-blue hover:bg-terminal-blue/10 font-mono bg-transparent"
-                  size="lg"
-                  onClick={() => setShowAIChat(true)}
-                >
-                  <Bot className="mr-2 h-4 w-4" />
-                  COBRA AI
-                </Button>
+              <div className="flex flex-col gap-3 sm:gap-4 justify-center px-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                  <Button className="bg-terminal-blue text-black hover:bg-terminal-blue/80 font-mono text-sm" size="lg">
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    LAUNCH APE STORE
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="border-terminal-blue text-terminal-blue hover:bg-terminal-blue/10 font-mono bg-transparent text-sm"
+                    size="lg"
+                  >
+                    READ DOSSIER
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="border-terminal-blue text-terminal-blue hover:bg-terminal-blue/10 font-mono bg-transparent text-sm"
+                    size="lg"
+                    onClick={() => setShowTerminal(true)}
+                  >
+                    ENTER TERMINAL
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="border-terminal-blue text-terminal-blue hover:bg-terminal-blue/10 font-mono bg-transparent text-sm"
+                    size="lg"
+                    onClick={() => setShowAIChat(true)}
+                  >
+                    <Bot className="mr-2 h-4 w-4" />
+                    COBRA AI
+                  </Button>
+                </div>
               </div>
             </div>
           )}
@@ -115,7 +117,7 @@ export default function CobraProtocol() {
       {bootComplete && (
         <>
           {/* AI Engine Overview */}
-          <section className="py-20 px-4 max-w-7xl mx-auto">
+          <section className="py-10 sm:py-20 px-4 max-w-7xl mx-auto">
             <TerminalSection title="COBRA INTEL MODULE v1.0" className="mb-8">
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-4">
@@ -153,9 +155,9 @@ export default function CobraProtocol() {
           </section>
 
           {/* Token Utility */}
-          <section className="py-20 px-4 max-w-7xl mx-auto">
+          <section className="py-10 sm:py-20 px-4 max-w-7xl mx-auto">
             <TerminalSection title="$COBRA TOKEN ARSENAL">
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-6 sm:mb-8">
                 {[
                   { icon: Shield, title: "Auto-Stake Protocol", desc: "Autonomous yield generation" },
                   { icon: Target, title: "Smart Attack Detection", desc: "AI-powered threat analysis" },
@@ -180,9 +182,9 @@ export default function CobraProtocol() {
           </section>
 
           {/* APE STORE Integration */}
-          <section className="py-20 px-4 max-w-7xl mx-auto">
+          <section className="py-10 sm:py-20 px-4 max-w-7xl mx-auto">
             <TerminalSection title="APE STORE NODE LINKED" className="mb-8">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center">
                 <div className="space-y-4">
                   <p className="text-terminal-blue/80">
                     COBRA is live on APE STORE — bringing stealth-grade intelligence into the most accessible dApp layer
@@ -227,16 +229,16 @@ export default function CobraProtocol() {
           </section>
 
           {/* Mission Roadmap */}
-          <section className="py-20 px-4 max-w-7xl mx-auto">
+          <section className="py-10 sm:py-20 px-4 max-w-7xl mx-auto">
             <TerminalSection title="ENCRYPTED MISSION LOGS">
               <MissionLog />
             </TerminalSection>
           </section>
 
           {/* Community Section */}
-          <section className="py-20 px-4 max-w-7xl mx-auto">
+          <section className="py-10 sm:py-20 px-4 max-w-7xl mx-auto">
             <TerminalSection title="COBRA COMMUNITY CHANNELS">
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
                 <div className="space-y-6">
                   <div className="border border-terminal-blue/30 p-6 bg-terminal-blue/5 hover:bg-terminal-blue/10 transition-colors">
                     <div className="flex items-center gap-4 mb-4">
@@ -295,19 +297,20 @@ export default function CobraProtocol() {
           {/* Footer */}
           <footer className="py-12 px-4 border-t border-terminal-blue/30">
             <div className="max-w-7xl mx-auto">
-              <div className="text-center space-y-6">
+              <div className="text-center space-y-4 sm:space-y-6">
                 <div className="font-mono text-xs text-terminal-blue/60">
-                  <pre>{`
-    _______________
-   /               \\
-  /    🐍 COBRA     \\
- /    PROTOCOL      \\
+                  <pre className="hidden sm:block">{`
+_______________
+/               \\
+/    🐍 COBRA     \\
+/    PROTOCOL      \\
 /____________________\\
-                  `}</pre>
+                `}</pre>
+                  <div className="sm:hidden text-terminal-blue text-2xl">🐍 COBRA PROTOCOL</div>
                 </div>
 
-                <div className="flex justify-center gap-6 items-center flex-wrap">
-                  <div className="flex items-center gap-2">
+                <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 items-center">
+                  <div className="flex items-center gap-2 flex-wrap justify-center">
                     <span className="bg-terminal-blue text-black px-2 py-1 text-xs rounded">APE STORE</span>
                     <span className="bg-blue-500 text-white px-2 py-1 text-xs rounded">BASE</span>
                     <span className="bg-terminal-blue text-black px-2 py-1 text-xs rounded">COBRA</span>
@@ -318,30 +321,30 @@ export default function CobraProtocol() {
                       className="text-terminal-blue/70 hover:text-terminal-blue transition-colors flex items-center gap-2"
                     >
                       <img src="/images/twitter-icon.png" alt="Twitter" className="w-4 h-4" />
-                      Twitter
+                      <span className="hidden sm:inline">Twitter</span>
                     </button>
                     <button
                       onClick={() => window.open("https://t.me/CobraProtocolOfficial", "_blank")}
                       className="text-terminal-blue/70 hover:text-terminal-blue transition-colors flex items-center gap-2"
                     >
                       <img src="/images/telegram-icon.webp" alt="Telegram" className="w-4 h-4" />
-                      Telegram
+                      <span className="hidden sm:inline">Telegram</span>
                     </button>
                   </div>
                 </div>
 
-                <div className="flex justify-center gap-4 text-sm">
+                <div className="flex flex-col sm:flex-row justify-center gap-2 sm:gap-4 text-xs sm:text-sm">
                   <button
                     onClick={() => setSoundEnabled(!soundEnabled)}
                     className={`px-3 py-1 border border-terminal-blue/30 ${soundEnabled ? "bg-terminal-blue/20" : ""}`}
                   >
-                    Sound FX: {soundEnabled ? "ON" : "OFF"}
+                    Sound: {soundEnabled ? "ON" : "OFF"}
                   </button>
-                  <button className="px-3 py-1 border border-terminal-blue/30">Terminal Mode</button>
+                  <button className="px-3 py-1 border border-terminal-blue/30">Terminal</button>
                   <button className="px-3 py-1 border border-terminal-blue/30">Night Ops</button>
                 </div>
 
-                <div className="text-xs text-terminal-blue/40">
+                <div className="text-xs text-terminal-blue/40 px-4">
                   COBRA PROTOCOL © 2024 | DEPLOYED ON BASE VIA APE STORE
                 </div>
               </div>
