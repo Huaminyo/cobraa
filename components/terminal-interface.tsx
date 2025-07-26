@@ -64,7 +64,7 @@ export function TerminalInterface({ isOpen, onClose }: TerminalInterfaceProps) {
       "Deployment: LIVE",
       "Cross-dApp: ENABLED",
       "Auto-updates: ACTIVE",
-      "Launch: https://apestore.dev/cobra",
+      "Launch: https://ape.store/base/0x39773d162c33c9a58e14eb48d5e8cea30b1a053a",
     ],
     social: () => [
       "COBRA PROTOCOL COMMUNITY:",

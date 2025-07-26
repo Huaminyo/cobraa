@@ -79,7 +79,13 @@ export default function CobraProtocol() {
 
               <div className="flex flex-col gap-3 sm:gap-4 justify-center px-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-                  <Button className="bg-terminal-blue text-black hover:bg-terminal-blue/80 font-mono text-sm" size="lg">
+                  <Button
+                    className="bg-terminal-blue text-black hover:bg-terminal-blue/80 font-mono text-sm"
+                    size="lg"
+                    onClick={() =>
+                      window.open("https://ape.store/base/0x39773d162c33c9a58e14eb48d5e8cea30b1a053a", "_blank")
+                    }
+                  >
                     <ExternalLink className="mr-2 h-4 w-4" />
                     LAUNCH APE STORE
                   </Button>
@@ -368,7 +374,12 @@ export default function CobraProtocol() {
                       operators already executing tactical strikes across the DeFi battlefield.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                      <Button className="bg-terminal-blue text-black hover:bg-terminal-blue/80 font-mono">
+                      <Button
+                        className="bg-terminal-blue text-black hover:bg-terminal-blue/80 font-mono"
+                        onClick={() =>
+                          window.open("https://ape.store/base/0x39773d162c33c9a58e14eb48d5e8cea30b1a053a", "_blank")
+                        }
+                      >
                         <ExternalLink className="mr-2 h-4 w-4" />
                         DEPLOY VIA APE STORE
                       </Button>
@@ -437,7 +448,12 @@ export default function CobraProtocol() {
                       <span>Real-time Price Feeds</span>
                     </div>
                   </div>
-                  <Button className="bg-terminal-blue text-black hover:bg-terminal-blue/80 font-mono">
+                  <Button
+                    className="bg-terminal-blue text-black hover:bg-terminal-blue/80 font-mono"
+                    onClick={() =>
+                      window.open("https://ape.store/base/0x39773d162c33c9a58e14eb48d5e8cea30b1a053a", "_blank")
+                    }
+                  >
                     <DollarSign className="mr-2 h-4 w-4" />
                     DEPLOY COBRA VIA APE STORE
                   </Button>
