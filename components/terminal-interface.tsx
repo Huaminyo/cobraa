@@ -68,8 +68,8 @@ export function TerminalInterface({ isOpen, onClose }: TerminalInterfaceProps) {
     ],
     social: () => [
       "COBRA PROTOCOL COMMUNITY:",
-      "🐦 Twitter: https://twitter.com/CobraProtocol",
-      "📱 Telegram: https://t.me/CobraProtocolOfficial",
+      "🐦 X: https://x.com/CobraProtocol_",
+      "📱 Telegram: https://t.me/cobraprotocolportal",
       "🌐 Website: https://cobraprotocol.xyz",
       "📊 Chart: https://dexscreener.com/base/cobra",
     ],

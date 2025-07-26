@@ -154,6 +154,239 @@ export default function CobraProtocol() {
             </TerminalSection>
           </section>
 
+          {/* About Section */}
+          <section className="py-10 sm:py-20 px-4 max-w-7xl mx-auto">
+            <TerminalSection title="CLASSIFIED DOSSIER - ABOUT COBRA PROTOCOL">
+              <div className="space-y-8">
+                {/* Mission Brief */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="text-terminal-blue font-mono text-lg mb-4 flex items-center gap-2">
+                        <Shield className="h-5 w-5" />
+                        MISSION BRIEF
+                      </h4>
+                      <p className="text-terminal-blue/80 text-sm leading-relaxed">
+                        COBRA PROTOCOL is an AI-native cryptocurrency deployed on the BASE network through APE STORE
+                        infrastructure. Our mission: Deploy stealth-grade intelligence systems across decentralized
+                        networks to execute precision strikes in the DeFi ecosystem.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h4 className="text-terminal-blue font-mono text-lg mb-4 flex items-center gap-2">
+                        <Target className="h-5 w-5" />
+                        TACTICAL OBJECTIVES
+                      </h4>
+                      <div className="space-y-2 text-sm">
+                        <div className="flex items-start gap-2">
+                          <span className="text-terminal-blue/60">•</span>
+                          <span className="text-terminal-blue/80">Establish autonomous yield generation protocols</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="text-terminal-blue/60">•</span>
+                          <span className="text-terminal-blue/80">Deploy AI-powered market intelligence systems</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="text-terminal-blue/60">•</span>
+                          <span className="text-terminal-blue/80">
+                            Execute cross-platform integration via APE STORE
+                          </span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="text-terminal-blue/60">•</span>
+                          <span className="text-terminal-blue/80">
+                            Maintain operational security across BASE network
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="text-terminal-blue font-mono text-lg mb-4 flex items-center gap-2">
+                        <Brain className="h-5 w-5" />
+                        TECHNOLOGY STACK
+                      </h4>
+                      <div className="border border-terminal-blue/30 p-4 bg-terminal-blue/5">
+                        <div className="space-y-3 text-sm">
+                          <div className="flex justify-between">
+                            <span>Blockchain:</span>
+                            <span className="text-blue-400">BASE Network</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>AI Engine:</span>
+                            <span className="text-blue-400">GPT-4o Integration</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>Distribution:</span>
+                            <span className="text-blue-400">APE STORE</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>Protocol Type:</span>
+                            <span className="text-blue-400">ERC-20 + AI Layer</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>Security Level:</span>
+                            <span className="text-yellow-400">CLASSIFIED</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <h4 className="text-terminal-blue font-mono text-lg mb-4 flex items-center gap-2">
+                        <Zap className="h-5 w-5" />
+                        OPERATIONAL STATUS
+                      </h4>
+                      <div className="space-y-2 text-sm">
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                          <span>Phase 1: APE STORE Deployment - COMPLETE</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                          <span>Phase 2: AI Integration - ACTIVE</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
+                          <span>Phase 3: Auto-Stake Protocol - IN PROGRESS</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-red-400 rounded-full"></div>
+                          <span>Phase 4: x100 Strike Mode - LOCKED</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Team Section */}
+                <div className="border-t border-terminal-blue/30 pt-8">
+                  <h4 className="text-terminal-blue font-mono text-lg mb-6 text-center">COMMAND STRUCTURE</h4>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="border border-terminal-blue/30 p-4 bg-terminal-blue/5 text-center">
+                      <div className="text-2xl mb-2">🐍</div>
+                      <h5 className="text-terminal-blue font-mono text-sm mb-2">COBRA AI</h5>
+                      <p className="text-terminal-blue/70 text-xs">Tactical Intelligence Officer</p>
+                      <div className="mt-2 text-xs text-blue-400">STATUS: ONLINE</div>
+                    </div>
+                    <div className="border border-terminal-blue/30 p-4 bg-terminal-blue/5 text-center">
+                      <div className="text-2xl mb-2">⚡</div>
+                      <h5 className="text-terminal-blue font-mono text-sm mb-2">BASE NETWORK</h5>
+                      <p className="text-terminal-blue/70 text-xs">Infrastructure Command</p>
+                      <div className="mt-2 text-xs text-blue-400">STATUS: OPERATIONAL</div>
+                    </div>
+                    <div className="border border-terminal-blue/30 p-4 bg-terminal-blue/5 text-center">
+                      <div className="text-2xl mb-2">🍌</div>
+                      <h5 className="text-terminal-blue font-mono text-sm mb-2">APE STORE</h5>
+                      <p className="text-terminal-blue/70 text-xs">Distribution Network</p>
+                      <div className="mt-2 text-xs text-blue-400">STATUS: CONNECTED</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Tokenomics */}
+                <div className="border-t border-terminal-blue/30 pt-8">
+                  <h4 className="text-terminal-blue font-mono text-lg mb-6 text-center">ASSET ALLOCATION</h4>
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div className="space-y-4">
+                      <h5 className="text-terminal-blue font-mono text-base mb-4">TOKEN DISTRIBUTION</h5>
+                      <div className="space-y-3">
+                        <div className="flex justify-between items-center">
+                          <span className="text-sm">Community Operations</span>
+                          <div className="flex items-center gap-2">
+                            <div className="w-20 h-2 bg-terminal-blue/20 rounded">
+                              <div className="w-3/5 h-full bg-terminal-blue rounded"></div>
+                            </div>
+                            <span className="text-xs text-terminal-blue">60%</span>
+                          </div>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="text-sm">Liquidity Pool</span>
+                          <div className="flex items-center gap-2">
+                            <div className="w-20 h-2 bg-terminal-blue/20 rounded">
+                              <div className="w-1/4 h-full bg-blue-400 rounded"></div>
+                            </div>
+                            <span className="text-xs text-terminal-blue">25%</span>
+                          </div>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="text-sm">Development Fund</span>
+                          <div className="flex items-center gap-2">
+                            <div className="w-20 h-2 bg-terminal-blue/20 rounded">
+                              <div className="w-1/5 h-full bg-yellow-400 rounded"></div>
+                            </div>
+                            <span className="text-xs text-terminal-blue">10%</span>
+                          </div>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="text-sm">Strategic Reserve</span>
+                          <div className="flex items-center gap-2">
+                            <div className="w-20 h-2 bg-terminal-blue/20 rounded">
+                              <div className="w-1/20 h-full bg-red-400 rounded"></div>
+                            </div>
+                            <span className="text-xs text-terminal-blue">5%</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="space-y-4">
+                      <h5 className="text-terminal-blue font-mono text-base mb-4">PROTOCOL METRICS</h5>
+                      <div className="border border-terminal-blue/30 p-4 bg-terminal-blue/5">
+                        <div className="space-y-3 text-sm">
+                          <div className="flex justify-between">
+                            <span>Total Supply:</span>
+                            <span className="text-terminal-blue">1,000,000,000 $COBRA</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>Contract Address:</span>
+                            <span className="text-terminal-blue text-xs">0x...CLASSIFIED</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>Launch Date:</span>
+                            <span className="text-terminal-blue">2024 Q4</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>Security Audit:</span>
+                            <span className="text-blue-400">VERIFIED ✓</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Call to Action */}
+                <div className="border-t border-terminal-blue/30 pt-8 text-center">
+                  <div className="space-y-4">
+                    <h4 className="text-terminal-blue font-mono text-xl">JOIN THE COBRA PROTOCOL</h4>
+                    <p className="text-terminal-blue/80 text-sm max-w-2xl mx-auto">
+                      Ready to deploy with the most advanced AI-native crypto protocol on BASE? Join thousands of
+                      operators already executing tactical strikes across the DeFi battlefield.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                      <Button className="bg-terminal-blue text-black hover:bg-terminal-blue/80 font-mono">
+                        <ExternalLink className="mr-2 h-4 w-4" />
+                        DEPLOY VIA APE STORE
+                      </Button>
+                      <Button
+                        variant="outline"
+                        className="border-terminal-blue text-terminal-blue hover:bg-terminal-blue/10 font-mono bg-transparent"
+                        onClick={() => setShowAIChat(true)}
+                      >
+                        <Bot className="mr-2 h-4 w-4" />
+                        CONSULT COBRA AI
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TerminalSection>
+          </section>
+
           {/* Token Utility */}
           <section className="py-10 sm:py-20 px-4 max-w-7xl mx-auto">
             <TerminalSection title="$COBRA TOKEN ARSENAL">
@@ -243,10 +476,10 @@ export default function CobraProtocol() {
                   <div className="border border-terminal-blue/30 p-6 bg-terminal-blue/5 hover:bg-terminal-blue/10 transition-colors">
                     <div className="flex items-center gap-4 mb-4">
                       <div className="w-12 h-12">
-                        <img src="/images/twitter-icon.png" alt="Twitter" className="w-full h-full" />
+                        <img src="/images/twitter-icon.png" alt="X (Twitter)" className="w-full h-full" />
                       </div>
                       <div>
-                        <h4 className="text-terminal-blue font-mono text-lg">TWITTER COMMAND CENTER</h4>
+                        <h4 className="text-terminal-blue font-mono text-lg">X COMMAND CENTER</h4>
                         <p className="text-terminal-blue/70 text-sm">Real-time intel & strike updates</p>
                       </div>
                     </div>
@@ -257,10 +490,10 @@ export default function CobraProtocol() {
                     </div>
                     <Button
                       className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-mono"
-                      onClick={() => window.open("https://twitter.com/CobraProtocol", "_blank")}
+                      onClick={() => window.open("https://x.com/CobraProtocol_", "_blank")}
                     >
                       <ExternalLink className="mr-2 h-4 w-4" />
-                      FOLLOW @COBRAPROTOCOL
+                      FOLLOW @COBRAPROTOCOL_
                     </Button>
                   </div>
                 </div>
@@ -272,7 +505,7 @@ export default function CobraProtocol() {
                         <img src="/images/telegram-icon.webp" alt="Telegram" className="w-full h-full" />
                       </div>
                       <div>
-                        <h4 className="text-terminal-blue font-mono text-lg">TELEGRAM WAR ROOM</h4>
+                        <h4 className="text-terminal-blue font-mono text-lg">TELEGRAM PORTAL</h4>
                         <p className="text-terminal-blue/70 text-sm">Encrypted comms & strategy</p>
                       </div>
                     </div>
@@ -283,10 +516,10 @@ export default function CobraProtocol() {
                     </div>
                     <Button
                       className="mt-4 bg-blue-400 hover:bg-blue-500 text-white font-mono"
-                      onClick={() => window.open("https://t.me/CobraProtocolOfficial", "_blank")}
+                      onClick={() => window.open("https://t.me/cobraprotocolportal", "_blank")}
                     >
                       <ExternalLink className="mr-2 h-4 w-4" />
-                      JOIN TELEGRAM
+                      JOIN PORTAL
                     </Button>
                   </div>
                 </div>
@@ -317,14 +550,14 @@ _______________
                   </div>
                   <div className="flex items-center gap-4">
                     <button
-                      onClick={() => window.open("https://twitter.com/CobraProtocol", "_blank")}
+                      onClick={() => window.open("https://x.com/CobraProtocol_", "_blank")}
                       className="text-terminal-blue/70 hover:text-terminal-blue transition-colors flex items-center gap-2"
                     >
-                      <img src="/images/twitter-icon.png" alt="Twitter" className="w-4 h-4" />
-                      <span className="hidden sm:inline">Twitter</span>
+                      <img src="/images/twitter-icon.png" alt="X" className="w-4 h-4" />
+                      <span className="hidden sm:inline">X</span>
                     </button>
                     <button
-                      onClick={() => window.open("https://t.me/CobraProtocolOfficial", "_blank")}
+                      onClick={() => window.open("https://t.me/cobraprotocolportal", "_blank")}
                       className="text-terminal-blue/70 hover:text-terminal-blue transition-colors flex items-center gap-2"
                     >
                       <img src="/images/telegram-icon.webp" alt="Telegram" className="w-4 h-4" />
